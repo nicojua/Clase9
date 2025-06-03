@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal de toda la aplicación -->
+    <div class="container">
+        <!-- Header con título dinámico -->
+        <div class="header">
+            <h1 class="title" id="dynamicTitle">HOLA</h1>
+        </div>
+        
+        <!-- Contenedor del formulario -->
+        <div class="form-container">
+            <!-- Formulario principal -->
+            <form id="mainForm">
+                <!-- Grid que organiza los campos -->
+                <div class="form-grid">
+                    <!-- Campo Nombre Completo -->
+                    <div class="field-group">
+                        <label for="nombreCompleto">Nombre Completo</label>
+                        <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Ingresa tu nombre completo">
+                        <!-- Div donde aparecerán los mensajes de error para este campo -->
+                        <div class="error-message" id="error-nombreCompleto"></div>
+                    </div>
+
+                    <!-- Campo Email -->
+                    <div class="field-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+                        <!-- Div donde aparecerán los mensajes de error para este campo -->
+                        <div class="error-message" id="error-email"></div>
+                    </div>
+
+                    <!-- Campo Contraseña -->
+                    <div class="field-group">
+                        <label for="contrasenia">Contraseña</label>
+                        <input type="text" id="contrasenia" name="contrasenia" placeholder="Ingresa tu contraseña correctamente">
+                        <!-- Div donde aparecerán los mensajes de error para este campo -->
+                        <div class="error-message" id="error-contrasenia"></div>
+                    </div>
+
+                    <!-- Campo Edad -->
+                    <div class="field-group">
+                        <label for="edad">Edad</label>
+                        <input type="edad" id="edad" name="edad" placeholder="pone bien la edad">
+                        <!-- Div donde aparecerán los mensajes de error para este campo -->
+                        <div class="error-message" id="error-edad"></div>
+                    </div>
+                    <!-- Campo Telefono -->
+                    <div class="field-group">
+                        <label for="telefono">Telefono</label>
+                        <input type="text" id="telefono" name="telefono" placeholder="Ingresa bien el telefono">
+                        <!-- Div donde aparecerán los mensajes de error para este campo -->
+                        <div class="error-message" id="error-telefono"></div>
+                    </div>
+
+                    <!-- Campo Direccion -->
+                    <div class="field-group">
+                        <label for="direccion">Direccion</label>
+                        <input type="direccion" id="direccion" name="direccion" placeholder="Avda Siempre viva 747">
+                        <!-- Div donde aparecerán los mensajes de error para este campo -->
+                        <div class="error-message" id="error-direccion"></div>
+                    </div>
+                    <!-- Campo Ciudad -->
+                    <div class="field-group">
+                        <label for="ciudad">Nombre Completo</label>
+                        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad de Springfield">
+                        <!-- Div donde aparecerán los mensajes de error para este campo -->
+                        <div class="error-message" id="error-ciudad"></div>
+                    </div>
+
+                    <!-- Campo Codigo Postal -->
+                    <div class="field-group">
+                        <label for="cp">Codigo Postal</label>
+                        <input type="cp" id="cp" name="cp" placeholder="1617">
+                        <!-- Div donde aparecerán los mensajes de error para este campo -->
+                        <div class="error-message" id="error-cp"></div>
+                    </div>
+                    <!-- Campo DNI -->
+                    <div class="field-group">
+                        <label for="dni">DNI</label>
+                        <input type="dni" id="dni" name="dni" placeholder="12345678">
+                        <!-- Div donde aparecerán los mensajes de error para este campo -->
+                        <div class="error-message" id="error-dni"></div>
+                    </div>
+
+                    <!-- Contenedor del botón enviar (ocupa las dos columnas en desktop) -->
+                    <div class="submit-container">
+                        <button type="submit" class="submit-btn">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal (ventana emergente) - Inicialmente oculto -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- Botón para cerrar el modal -->
+                <span class="close">&times;</span>
+                <!-- Título del modal (cambia según el contexto) -->
+                <h2 class="modal-title" id="modalTitle">Información del Formulario</h2>
+            </div>
+            <!-- Contenido del modal (se genera dinámicamente con JavaScript) -->
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
